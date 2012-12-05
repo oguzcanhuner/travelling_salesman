@@ -1,0 +1,10 @@
+reinforcement learning algorith:
+
+- randomly traverse the grid, collecting a set of edges crossed, and assigning each edge a score, depending on the weight of that edge
+
+
+- for i iterations
+ - for the number of nodes
+  - start at node 0 and pick one random node and add it to the 'visited' array, with a score for that edge
+ -end
+-end

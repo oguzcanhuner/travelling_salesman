@@ -8,9 +8,11 @@ class CompleteGraph < Hash
 
   def initialize(options = {})
     coords = []
+    @size = options[:size] ? options[:size] : 0
     if options[:csv_path]
       #todo: add some error handling here
       coords = CSV.read(options[:csv_path])
+      @size = coords.size
       coords.collect!{|coord| [coord[0].to_i,coord[1].to_i] }
     else
       coords = create_random_coordinates(options[:size])
@@ -18,6 +20,10 @@ class CompleteGraph < Hash
     generate_graph(coords)
     # Don't allow the hash to be changed after creation
     self.freeze
+  end
+
+  def no_of_nodes
+    @size
   end
 
   private
