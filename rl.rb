@@ -1,0 +1,1 @@
+#this is an attempt to solve the travelling salesman problem using an adapted version of the reinforcement learning algorithm
