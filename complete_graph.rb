@@ -22,6 +22,7 @@ class CompleteGraph < Hash
     self.freeze
   end
 
+  #todo: this shouldn't be a method
   def no_of_nodes
     @size
   end
